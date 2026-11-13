@@ -1,0 +1,35 @@
+{
+    "manifestVersion": 1,
+    "id": "sample-extension",
+    "version": "0.1.0",
+    "name": "My first sample extension",
+    "description": "A sample Azure DevOps extension.",
+    "publisher": "fabrikamdev",
+    "public": false,
+    "categories": ["Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/icon.png"
+    },
+    "contributions": [
+        {
+            "id": "hello-world-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Adds a 'Hello' hub to the Work hub group.",
+            "targets": [
+                "ms.vss-work-web.work-hub-group"
+            ],
+            "properties": {
+                "name": "Hello World",
+                "uri": "hello-world.html"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.work"
+    ]
+}
